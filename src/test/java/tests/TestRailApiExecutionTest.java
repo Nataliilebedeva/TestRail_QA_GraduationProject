@@ -46,6 +46,7 @@ public class TestRailApiExecutionTest extends BaseApiTest {
         Assert.assertEquals(actualCases.getTitle(), cases.getTitle());
     }
 
+    @Description("Negative API test for getting a Test Cases by incorrect GET request")
     @Test(dependsOnMethods = "getCasesTest")
     public void negativeGetCasesTest() {
         log.info("Test in progress: TestRailApiExecutionTest.negativeGetCasesTest()");
@@ -54,6 +55,7 @@ public class TestRailApiExecutionTest extends BaseApiTest {
 
     }
 
+    @Description("API test for getting Test Cases History by GET request")
     @Test(dependsOnMethods = "negativeGetCasesTest")
     public void getHistoryForCases() {
         log.info("Test in progress: TestRailApiExecutionTest.getHistoryForCases()");
@@ -61,6 +63,7 @@ public class TestRailApiExecutionTest extends BaseApiTest {
         new CasesAdapter().getHistory(actualCases);
     }
 
+    @Description("Negative API test for getting Test Cases History by incorrect GET request")
     @Test(dependsOnMethods = "getHistoryForCases")
     public void negativeGetHistoryForCasesTest() {
         log.info("Test in progress: TestRailApiExecutionTest.negativeGetHistoryForCasesTest()");
@@ -68,17 +71,18 @@ public class TestRailApiExecutionTest extends BaseApiTest {
         new CasesAdapter().getHistoryFailed(actualCases);
     }
 
+    @Description("API test for updating Test Cases by POST request")
     @Test(dependsOnMethods = "negativeGetHistoryForCasesTest")
     public void updateCaseTest() {
         log.info("Test in progress: TestRailApiExecutionTest.updateCaseTest()");
         Cases expected_cases = Cases.builder()
                 .title("TITLE №00")
-                .refs("Какое то обновленное поле...")
+                .refs("Какое-то обновленное поле...")
                 .build();
 
         Cases actual_case = new CasesAdapter().updateCase(actualCasesList.get(0).getId(), expected_cases);
         Assert.assertEquals(expected_cases.getTitle(), actual_case.getTitle());
-        System.out.println(project.getName());
+        log.info("Project name:" + project.getName());
     }
 }
 

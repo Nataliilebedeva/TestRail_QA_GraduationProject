@@ -25,7 +25,7 @@ public class CasesAdapter extends BaseAdapter {
         return gson.fromJson(response.asString().trim(), Cases.class);
     }
 
-    @Step("GET test cases API request")
+    @Step("GET Test Cases API request")
     public Cases get(Cases cases) {
         Response response = given()
                 .when()
@@ -38,6 +38,7 @@ public class CasesAdapter extends BaseAdapter {
         return gson.fromJson(response.asString().trim(), Cases.class);
     }
 
+    @Step("GET Test Cases API request")
     public Cases getFailed(Cases cases) {
         Response response = given()
                 .when()
@@ -49,7 +50,7 @@ public class CasesAdapter extends BaseAdapter {
                 .extract().response();
         return gson.fromJson(response.asString().trim(), Cases.class);
     }
-
+    @Step("GET Test Case History API request")
     public Response getHistory(Cases cases) {
         return given()
                 .when()
@@ -62,6 +63,7 @@ public class CasesAdapter extends BaseAdapter {
 
     }
 
+    @Step("GET Test Case History API request")
     public Response getHistoryFailed(Cases cases) {
         return given()
                 .when()
