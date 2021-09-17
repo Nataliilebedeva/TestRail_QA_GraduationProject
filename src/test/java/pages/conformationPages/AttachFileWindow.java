@@ -2,7 +2,7 @@ package pages.conformationPages;
 
 import baseEntities.BasePage;
 import core.BrowsersService;
-import executors.RobotExecutor;
+import utils.RobotExecutor;
 import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;

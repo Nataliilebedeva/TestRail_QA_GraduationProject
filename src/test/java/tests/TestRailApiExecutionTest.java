@@ -40,10 +40,10 @@ public class TestRailApiExecutionTest extends BaseApiTest {
     @Test(dependsOnMethods = "addCasesTest")
     public void getCasesTest() {
         log.info("Test in progress: TestRailApiExecutionTest.getCasesTest()");
-        Cases actualCases = actualCasesList.get(0);
-        Cases cases = new CasesAdapter().get(actualCases);
-
-        Assert.assertEquals(actualCases.getTitle(), cases.getTitle());
+        for (Cases actualCases : actualCasesList) {
+            Cases expectedCases = new CasesAdapter().get(actualCases);
+            Assert.assertEquals(actualCases.getTitle(), expectedCases.getTitle());
+        }
     }
 
     @Description("Negative API test for getting a Test Cases by incorrect GET request")
@@ -59,8 +59,10 @@ public class TestRailApiExecutionTest extends BaseApiTest {
     @Test(dependsOnMethods = "negativeGetCasesTest")
     public void getHistoryForCases() {
         log.info("Test in progress: TestRailApiExecutionTest.getHistoryForCases()");
-        Cases actualCases = actualCasesList.get(0);
-        new CasesAdapter().getHistory(actualCases);
+        for (Cases actualCases : actualCasesList) {
+            Cases expectedCases = new CasesAdapter().get(actualCases);
+            new CasesAdapter().getHistory(expectedCases);
+        }
     }
 
     @Description("Negative API test for getting Test Cases History by incorrect GET request")

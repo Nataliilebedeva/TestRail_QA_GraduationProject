@@ -15,7 +15,6 @@ public class Cleaner extends BaseApiTest {
 
         for (Project project : projectList){
             new ProjectsAdapter().delete(project.getId());
-
         }
     }
 }
