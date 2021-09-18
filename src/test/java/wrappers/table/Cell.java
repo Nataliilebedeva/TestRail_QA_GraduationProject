@@ -1,8 +1,7 @@
-package table;
+package wrappers.table;
 
 
 import core.BrowsersService;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import wrappers.UIElement;
 

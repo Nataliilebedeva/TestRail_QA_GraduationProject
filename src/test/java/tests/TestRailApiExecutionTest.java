@@ -1,8 +1,8 @@
 package tests;
 
-import adapters.CasesAdapter;
-import adapters.ProjectsAdapter;
-import adapters.SectionAdapter;
+import apiRequest.adapters.CasesAdapter;
+import apiRequest.adapters.ProjectsAdapter;
+import apiRequest.adapters.SectionAdapter;
 import baseEntities.BaseApiTest;
 import io.qameta.allure.Description;
 import lombok.extern.log4j.Log4j2;

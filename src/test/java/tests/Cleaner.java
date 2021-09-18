@@ -1,6 +1,6 @@
 package tests;
 
-import adapters.ProjectsAdapter;
+import apiRequest.adapters.ProjectsAdapter;
 import baseEntities.BaseApiTest;
 import models.Project;
 import org.testng.annotations.Test;

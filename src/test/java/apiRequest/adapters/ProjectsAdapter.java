@@ -1,7 +1,7 @@
-package adapters;
+package apiRequest.adapters;
 
 import com.google.common.reflect.TypeToken;
-import endpoints.ProjectEndpoints;
+import apiRequest.adapters.endpoints.ProjectEndpoints;
 import io.qameta.allure.Step;
 import io.restassured.mapper.ObjectMapperType;
 import io.restassured.response.Response;

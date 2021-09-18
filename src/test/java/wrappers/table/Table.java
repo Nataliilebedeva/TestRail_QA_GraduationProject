@@ -1,4 +1,4 @@
-package table;
+package wrappers.table;
 
 import core.BrowsersService;
 import org.openqa.selenium.By;

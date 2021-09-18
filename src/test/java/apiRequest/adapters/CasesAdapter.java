@@ -1,6 +1,6 @@
-package adapters;
+package apiRequest.adapters;
 
-import endpoints.CasesEndpoint;
+import apiRequest.adapters.endpoints.CasesEndpoint;
 import io.qameta.allure.Step;
 import io.restassured.mapper.ObjectMapperType;
 import io.restassured.response.Response;

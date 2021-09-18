@@ -22,7 +22,7 @@ public class DashboardPage extends HeaderDashboard {
 
     private final static By DASHBOARD_PAGE_TITLE = By.className("content-header-title");
     private final static By ADD_PROJECT_BUTTON = By.id("sidebar-projects-add");
-    private final static By PROJECTS_LIST = By.xpath("//table[@class = 'grid']//tr[@class != 'header']//td[3]//a[1]");
+    private final static By PROJECTS_LIST = By.xpath("//wrappers.table[@class = 'grid']//tr[@class != 'header']//td[3]//a[1]");
     private final static By ICON_FOR_POPUP = By.className("icon-display-small");
     private final static By TITLE_POPUP_MESSAGE = By.className("tooltip-header");
     private final static String OPEN_SOME_PROJECT_BUTTON = "//*[@class='grid']//a[contains(text(), '%s')]";
