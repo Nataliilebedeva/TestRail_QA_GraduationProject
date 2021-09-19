@@ -17,7 +17,7 @@ public class AdministrationProjectsPage extends HeaderDashboard {
     private static final String endpoint = "/index.php?/admin/projects/overview";
 
     private final static By PROJECTS_PAGE_TITLE = By.xpath("//*[@class = 'content-header-title page_title']");
-    private final static By TABLE = By.xpath("//wrappers.table[@class = 'grid']");
+    private final static By TABLE = By.xpath("//table[@class = 'grid']");
 
 
     public AdministrationProjectsPage(BrowsersService browsersService, boolean openPageByUrl) {
