@@ -13,6 +13,7 @@
         <maven.compiler.target>8</maven.compiler.target>
         <aspectjweaver.version>1.9.6</aspectjweaver.version>
         <suiteXmlFile>src/test/resources/StartTest.xml</suiteXmlFile>
+        <allure.version>2.13.2</allure.version>
     </properties>
 
     <dependencies>
@@ -109,5 +110,18 @@
             </plugin>
         </plugins>
     </build>
+    <reporting>
+        <excludeDefaults>true</excludeDefaults>
+        <plugins>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.10.0</version>
+                <configuration>
+                    <reportVersion>${allure.version}</reportVersion>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
 
 </project>
