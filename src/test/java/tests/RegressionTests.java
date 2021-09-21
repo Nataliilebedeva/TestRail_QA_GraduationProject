@@ -14,8 +14,6 @@ import pages.SomeTestCasePage;
 import pages.conformationPages.ConfirmationDeleteWindow;
 import utils.DataProvider;
 
-import java.awt.*;
-
 @Log4j2
 public class RegressionTests extends BaseUITest {
 
