@@ -14,6 +14,7 @@ import wrappers.Button;
 import wrappers.UIElement;
 
 import java.util.List;
+
 @Log4j2
 public class DashboardPage extends HeaderDashboard {
     Actions actions;

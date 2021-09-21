@@ -15,6 +15,7 @@ import pages.conformationPages.ConfirmationDeleteWindow;
 import utils.DataProvider;
 
 import java.awt.*;
+
 @Log4j2
 public class RegressionTests extends BaseUITest {
 
@@ -49,29 +50,8 @@ public class RegressionTests extends BaseUITest {
         Assert.assertEquals(dashboardPage.getPopUpMessageTitleText(), "Compact View");
     }
 
-//    @Description("Positive test for uploading file in Test Case")
-//    @Test(dependsOnMethods = "positivePopUpMessageTest")
-//    public void positiveUploadingFileTest() throws AWTException, InterruptedException {
-//        log.info("Test in progress: RegressionTests.positiveUploadingFileTest()");
-//        project = ModelsFactory.getProject();
-//        AddEditTestCasePage addTestCasePage = new LoginPage(browsersService, true)
-//                .successfulLogin()
-//                .clickAddProjectButton()
-//                .addProject(project)
-//                .clickReturnDashboardPageButton()
-//                .clickProjectLink(project)
-//                .clickDashboardTestCaseButton()
-//                .clickAddTestCaseButton()
-//                .addTestCase(ModelsFactory.getCases())
-//                .clickEntityAttachmentFieldButton()
-//                .downloadFile("config.properties")
-//                .clickAttachButton();
-//
-//        Assert.assertEquals(addTestCasePage.getFirstFileName(), "config.properties");
-//    }
 
     @Description("Negative Boundary value test for trying to enter string without any symbols in Name Test Case input")
-    //@Test(dependsOnMethods = "negativeSafetyTest")
     @Test(dependsOnMethods = "positivePopUpMessageTest")
     public void negativeNullBoundaryValueTest() {
         log.info("Test in progress: RegressionTests.negativeNullBoundaryValueTest()");

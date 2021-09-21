@@ -47,7 +47,6 @@ public class Table {
                 return true;
             }
         }
-        // logger.info("Project not found");
         return false;
     }
 }

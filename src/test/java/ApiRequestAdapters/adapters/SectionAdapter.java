@@ -25,6 +25,4 @@ public class SectionAdapter extends BaseAdapter {
                 .extract().response();
         return gson.fromJson(response.asString().trim(), Section.class);
     }
-
-
 }

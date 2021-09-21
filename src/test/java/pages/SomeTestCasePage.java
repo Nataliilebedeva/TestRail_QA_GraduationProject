@@ -57,5 +57,4 @@ public class SomeTestCasePage extends BasePage {
     public String getTitleText() {
         return getTestCaseName().getText();
     }
-
 }

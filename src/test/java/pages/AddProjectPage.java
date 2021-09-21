@@ -13,10 +13,11 @@ import wrappers.Button;
 import wrappers.CheckBox;
 import wrappers.InputField;
 import wrappers.RadioButton;
+
 @Log4j2
 public class AddProjectPage extends BasePage {
 
-    private final static String ENDPOINT = "index.php?/admin/projects/add/%d";//???
+    private final static String ENDPOINT = "index.php?/admin/projects/add/%d";
 
     private final static By ADD_PROJECT_PAGE_TITLE = By.className("content-header-title");
     private final static By NAME_PROJECT_INPUT = By.id("name");
@@ -108,5 +109,4 @@ public class AddProjectPage extends BasePage {
                 .clickAddProjectButton();
         return new AdministrationProjectsPage(browsersService, false);
     }
-
 }

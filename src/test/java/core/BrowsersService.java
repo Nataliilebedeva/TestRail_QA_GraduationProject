@@ -18,6 +18,7 @@ public class BrowsersService {
 
     public BrowsersService() throws MalformedURLException {
         switch (ReadProperties.getInstance().getBrowserName().toLowerCase()) {
+
             case "chrome":
                 WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
@@ -29,8 +30,8 @@ public class BrowsersService {
 
                 driver = new ChromeDriver(chromeOptions);
                 break;
-            case "firefox":
 
+            case "firefox":
                 WebDriverManager.getInstance(DriverManagerType.FIREFOX).setup();
                 driver = new FirefoxDriver();
                 break;

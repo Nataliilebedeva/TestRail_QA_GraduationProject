@@ -22,7 +22,7 @@ public class TableRow {
     protected UIElement getCellByIndex(int index) {
         if (!(index > 0 & index <= 3)) {
             return null;
-        }            // добавить логгер error
+        }
         return tableCellList.get(index - 1).getUIElement();
     }
 }

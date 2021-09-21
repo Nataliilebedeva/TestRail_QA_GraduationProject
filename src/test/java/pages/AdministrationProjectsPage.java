@@ -64,5 +64,4 @@ public class AdministrationProjectsPage extends HeaderDashboard {
     public boolean projectIsFound(Project project) {
         return table.presentInTheTable(project.getName());
     }
-
 }

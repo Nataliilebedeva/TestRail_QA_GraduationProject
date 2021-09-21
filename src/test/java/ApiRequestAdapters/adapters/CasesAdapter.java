@@ -61,7 +61,6 @@ public class CasesAdapter extends BaseAdapter {
                 .log().status()
                 .statusCode(HttpStatus.SC_OK)
                 .extract().response();
-
     }
 
     @Step("GET Test Case History API request")
@@ -74,7 +73,6 @@ public class CasesAdapter extends BaseAdapter {
                 .log().status()
                 .statusCode(HttpStatus.SC_BAD_REQUEST)
                 .extract().response();
-
     }
 
     public Cases updateCase(int caseId, Cases cases) {

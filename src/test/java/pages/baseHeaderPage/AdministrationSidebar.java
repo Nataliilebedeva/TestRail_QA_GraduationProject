@@ -9,6 +9,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import pages.AdministrationProjectsPage;
 import wrappers.Button;
+
 @Log4j2
 public class AdministrationSidebar extends BasePage {
 

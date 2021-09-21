@@ -4,12 +4,14 @@ import ApiRequestAdapters.adapters.endpoints.ProjectEndpoints;
 import io.qameta.allure.Step;
 import io.restassured.mapper.ObjectMapperType;
 import io.restassured.response.Response;
+import lombok.extern.log4j.Log4j2;
 import models.Project;
 import models.AllProjects;
 import org.apache.http.HttpStatus;
 
 import static io.restassured.RestAssured.given;
 
+@Log4j2
 public class ProjectsAdapter extends BaseAdapter {
 
     public AllProjects get() {
@@ -21,13 +23,9 @@ public class ProjectsAdapter extends BaseAdapter {
                 .log().body()
                 .statusCode(HttpStatus.SC_OK)
                 .extract().response();
-        System.out.println(response.jsonPath().get("projects").toString());
+        log.info(response.jsonPath().get("projects").toString());
 
-//        return (List<Project>) gson.fromJson(response.jsonPath().get("projects").asString().trim(), new TypeToken<List<Project>>() {
-//        }.getType());
         return gson.fromJson(response.asString().trim(), AllProjects.class);
-
-
     }
 
     public Project get(int ID) {
@@ -53,8 +51,8 @@ public class ProjectsAdapter extends BaseAdapter {
                 .log().body()
                 .statusCode(HttpStatus.SC_OK)
                 .extract().response();
-        return gson.fromJson(response.asString().trim(), Project.class);
 
+        return gson.fromJson(response.asString().trim(), Project.class);
     }
 
     public void delete(int projectId) {
@@ -63,6 +61,5 @@ public class ProjectsAdapter extends BaseAdapter {
                 .post(String.format(ProjectEndpoints.DELETE_PROJECTS, projectId))
                 .then()
                 .statusCode(HttpStatus.SC_OK);
-
     }
 }

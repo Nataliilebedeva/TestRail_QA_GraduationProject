@@ -28,12 +28,9 @@ public class UIElement implements WebElement {
     public void click() {
         try {
             webElement.click();
-
         } catch (ElementNotVisibleException e) {
             ((JavascriptExecutor) browsersService.getDriver()).executeScript("arguments[0].scrollIntoView(true);", webElement);
             ((JavascriptExecutor) browsersService.getDriver()).executeScript("arguments[0].click();", webElement);
-            // waits.waitForClickable(webElement);
-            // webElement.click();
         }
     }
 

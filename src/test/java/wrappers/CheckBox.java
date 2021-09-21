@@ -22,5 +22,4 @@ public class CheckBox {
     public void changeState(boolean makeSelected) {
         if (this.isSelected() != makeSelected) this.element.click();
     }
-
 }
